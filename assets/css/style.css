@@ -48,7 +48,7 @@ body {
 }
 
 #question {
-  width: 250px;
+  width: 80%;
   font-size: 20px;
   color: white;
   border-radius: 10px;
@@ -85,11 +85,11 @@ body {
   background-color: blue;
 }
 
-/* #start:focus,
+#start:focus,
 #reset:focus,
 #btn0:focus,
 #btn1:focus,
 #btn2:focus,
 #btn3:focus {
   outline: 0;
-} */
+}

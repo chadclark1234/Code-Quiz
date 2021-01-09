@@ -11,49 +11,54 @@ let questionNum = 0;
 console.log(answerBtns);
 var qlist = [
   {
-    question: "That Veronica Vaughn is one fine piece of ace",
+    question: `"That Veronica Vaughn is one fine piece of ace."`,
     options: ["Dumb & Dumber", "Wayne's World", "Billy Madison", "Black Sheep"],
     correctAnswer: "2",
   },
   {
-    question: "What is the second question",
-    options: ["answer0", "answer1", "answer2", "answer3"],
+    question: `"They're "in" the computer?`,
+    options: ["Water Boy", "Napoleon Dynamite", "Super Troopers", "Zoolander"],
     correctAnswer: "3",
   },
   {
-    question: "What is the second question",
-    options: ["answer0", "answer1", "answer2", "answer3"],
+    question: `"I can't find a job anywhere, unless you want to work 40 hours a week."`,
+    options: ["Dumb & Dumber", "Longest Yard", "Zoolander", "Old School"],
+    correctAnswer: "0",
+  },
+  {
+    question: `"Now that's what I call some high quality H20"`,
+    options: ["Water Boy", "Billy Madison", "Grown Ups", "Coneheads"],
+    correctAnswer: "0",
+  },
+  {
+    question: `"Brothers don't shake hands. Brothers gotta hug"`,
+    options: ["Daddy's Home", "Super Troopers", "Old School", "Tommy Boy"],
     correctAnswer: "3",
   },
   {
-    question: "What is the second question",
-    options: ["answer0", "answer1", "answer2", "answer3"],
-    correctAnswer: "3",
+    question: `"Peeing your pants is the coolest!"`,
+    options: ["Elf", "Billy Madison", "Dodge Ball", "Grown Ups"],
+    correctAnswer: "1",
   },
   {
-    question: "Brothers don't shake hands. Brothers gotta hug",
-    options: ["Daddy's Home", "answer1", "answer2", "Tommy Boy"],
-    correctAnswer: "3",
+    question: `"You're going to die clown"`,
+    options: ["Cable Guy", "Anchorman", "Happy Gilmore", "Tommy Boy"],
+    correctAnswer: "2",
   },
   {
-    question: "What is the second question",
-    options: ["answer0", "answer1", "answer2", "answer3"],
-    correctAnswer: "3",
+    question: `"Bring your green hat, we're going streaking"`,
+    options: ["Old School", "Elf", "Zoolander", "Dodge Ball"],
+    correctAnswer: "0",
   },
   {
-    question: "What is the second question",
-    options: ["answer0", "answer1", "answer2", "answer3"],
-    correctAnswer: "3",
-  },
-  {
-    question: "What is the second question",
-    options: ["answer0", "answer1", "answer2", "answer3"],
-    correctAnswer: "3",
-  },
-  {
-    question: "What is the second question",
-    options: ["answer0", "answer1", "answer2", "answer3"],
-    correctAnswer: "3",
+    question: `"Are you too good for your home ball?"`,
+    options: [
+      "Happy Gilmore",
+      "Little Nicky",
+      "Napoleon Dynamite",
+      "Billy Madison",
+    ],
+    correctAnswer: "0",
   },
 ];
 
