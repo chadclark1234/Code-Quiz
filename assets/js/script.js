@@ -7,6 +7,7 @@ const option3 = document.getElementById("btn3");
 const question = document.getElementById("question");
 const answerBtns = document.querySelectorAll(".buttons button");
 let questionNum = 0;
+let playerScore = 1;
 
 console.log(answerBtns);
 var qlist = [
@@ -64,11 +65,12 @@ var qlist = [
 
 startGame.addEventListener("click", function () {
   alert("Match the correct comedy movie with the one-liner");
+  generateQuestion();
 });
 
 resetGame.addEventListener("click", function () {
+  window.location.reload();
   console.log("reset game");
-  question.textContent = "what you looking at?";
 });
 
 //GENERATE QUESTION FROM QLIST
@@ -80,14 +82,23 @@ function generateQuestion() {
 }
 
 //RUN GENERATE QUESTION RIGHT AWAY-WILL WANT TO CONNECT TO START BTN
-generateQuestion();
+// generateQuestion();
 
 //WATCHES FOR CLICK AND COMPARES ANSWER-CORRECT/INCORRECT
 for (i = 0; i < answerBtns.length; i++) {
   answerBtns[i].addEventListener("click", function (event) {
     var guess = event.target.id.split("btn")[1];
     //COMPARE ANSWER CLICK TO CORRECT ANSWER
-    alert(guess === qlist[questionNum].correctAnswer);
+    if (guess === qlist[questionNum].correctAnswer) {
+      alert(
+        `That is CORRECT! You have ${playerScore} out of ${
+          questionNum + 1
+        } points!`
+      );
+      playerScore++;
+    } else {
+      alert("That is INCORRECT");
+    }
     //ALLOWS A PAUSE AFTER SELECTION BEFORE LOADING NEW QUESTION
     setTimeout(function () {
       questionNum++;
@@ -96,6 +107,6 @@ for (i = 0; i < answerBtns.length; i++) {
       } else {
         alert("game over");
       }
-    }, 3000);
+    }, 1000);
   });
 }
