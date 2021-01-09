@@ -6,10 +6,12 @@ const option2 = document.getElementById("btn2");
 const option3 = document.getElementById("btn3");
 const question = document.getElementById("question");
 const answerBtns = document.querySelectorAll(".buttons button");
+let timer = document.querySelector(".timer");
 let questionNum = 0;
 let playerScore = 1;
+let secondsLeft = 60;
 
-console.log(answerBtns);
+//QUESTIONS AND ANSWERS
 var qlist = [
   {
     question: `"That Veronica Vaughn is one fine piece of ace."`,
@@ -63,14 +65,16 @@ var qlist = [
   },
 ];
 
+//START GAME
 startGame.addEventListener("click", function () {
   alert("Match the correct comedy movie with the one-liner");
   generateQuestion();
+  setTime();
 });
 
+//RESET GAME
 resetGame.addEventListener("click", function () {
   window.location.reload();
-  console.log("reset game");
 });
 
 //GENERATE QUESTION FROM QLIST
@@ -80,9 +84,6 @@ function generateQuestion() {
     answerBtns[i].textContent = qlist[questionNum].options[i];
   }
 }
-
-//RUN GENERATE QUESTION RIGHT AWAY-WILL WANT TO CONNECT TO START BTN
-// generateQuestion();
 
 //WATCHES FOR CLICK AND COMPARES ANSWER-CORRECT/INCORRECT
 for (i = 0; i < answerBtns.length; i++) {
@@ -109,4 +110,17 @@ for (i = 0; i < answerBtns.length; i++) {
       }
     }, 1000);
   });
+}
+
+//COUNTDOWN TIMER
+function setTime() {
+  var timerInterval = setInterval(function () {
+    secondsLeft--;
+    timer.textContent = secondsLeft;
+    console.log(secondsLeft);
+    if (secondsLeft === 0) {
+      clearInterval(timerInterval);
+      alert("GAME OVER!!");
+    }
+  }, 1000);
 }
